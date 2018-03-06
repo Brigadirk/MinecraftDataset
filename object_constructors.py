@@ -39,8 +39,8 @@ def gen_house(x, z, small=False):
 
 	#There is no logic to the choices. Just picked a few.
 	door = random.choice(['acacia_door','jungle_door', 'spruce_door', 'dark_oak_door'])
-	wall = random.choice(['glass','ice','cobblestone','mossy_cobblestone','brick_block','stonebrick']) 
-	roof = random.choice(['glass','brick_block', 'clay'])
+	wall = 'brick_block' #random.choice(['glass','ice','cobblestone','mossy_cobblestone','brick_block','stonebrick']) 
+	roof = 'glass' #random.choice(['glass','brick_block', 'clay'])
 	
 	if small:
 		w = random.randint(1,3)
@@ -98,7 +98,7 @@ def gen_sapling(x,y):
 def gen_art_sphere(x,z):
 	w = random.randint(1,3)
 	h = random.randint(1,3)
-	o = ['obsidian', 'ice', 'wool', 'diamond_block']
+	o = ['obsidian'] #, 'ice', 'wool', 'diamond_block']
 	stuff = random.choice(o)
 	stuff2 = random.choice(o)
 	generatorString = draw_cuboid(x-w,x+w,z-w,z+w,4,4+h,stuff)
